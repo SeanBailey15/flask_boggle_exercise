@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <section class="board">
+        <table>
+        {% for row in session['board_state'] %}
+            <tr>
+            {% for char in row %}
+                <td>
+                {{char}}
+                </td>
+            {% endfor %}
+            </tr>
+        {% endfor %}
+        </table>
+    </section>
+    <section class="word-input">
+        <form action="/validate-word">
+            <label for="player_input">Type found words here:</label>
+            <section class="player-input">
+                <input type="text" name="player_input" id="player-input" placeholder="Found A Word?">
+                <button>Submit</button>
+            </section>
+        </form>
+    </section>
+{% endblock %}

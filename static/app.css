@@ -1,0 +1,50 @@
+.board {
+  display: flex;
+  justify-content: center;
+  font-size: 5rem;
+  font-family: "Roboto Mono", monospace;
+}
+
+.board td {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  background-color: rgba(128, 209, 236, 0.76);
+}
+
+.word-input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3rem;
+  font-size: 2rem;
+  font-family: "Roboto Mono", monospace;
+}
+
+.word-input label {
+  display: flex;
+}
+
+.player-input {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+  height: 2rem;
+}
+
+.player-input input {
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.player-input button {
+  color: white;
+  font-size: 1.5rem;
+  background-color: green;
+  border: 2px solid black;
+  border-radius: 10%;
+  margin-left: 1rem;
+}
+
+.player-input :hover {
+  cursor: pointer;
+}
