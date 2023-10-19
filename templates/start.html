@@ -1,8 +1,10 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h1>IT'S BOGGLE TIME!</h1>
-<form action="/game">
-<button>Start Game!</button>
+<section class="splash">
+    <h1 class="splash-title">IT'S BOGGLE TIME!</h1>
+</section>
+<form class="start-btn" action="/game">
+    <button class="start-game">Start Game!</button>
 </form>
 {% endblock %}

@@ -1,15 +1,15 @@
 from boggle import Boggle
-from flask import Flask, request, render_template, session
-from flask_debugtoolbar import DebugToolbarExtension
+from flask import Flask, request, render_template, session, jsonify
+# from flask_debugtoolbar import DebugToolbarExtension
 
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = "secret"
 
-debug = DebugToolbarExtension(app)
-app.config['DEBUG_TB_INTERCEPT_REDIRECTS'] = False
-app.config['DEBUG_TB_HOSTS'] = ['dont-show-debug-toolbar']
-app.config['TESTING'] = True
+# debug = DebugToolbarExtension(app)
+# app.config['DEBUG_TB_INTERCEPT_REDIRECTS'] = False
+# app.config['DEBUG_TB_HOSTS'] = ['dont-show-debug-toolbar']
+# app.config['TESTING'] = True
 
 boggle_game = Boggle()
 
@@ -26,4 +26,8 @@ def show_game():
 
 @app.route('/validate-word')
 def validate_word():
-    post
+    word = request.args['word']
+    board = session['board_state']
+    response = boggle_game.check_valid_word(board, word)
+
+    return jsonify({'result': response})

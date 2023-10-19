@@ -1,6 +1,11 @@
 {% extends "base.html" %}
 
 {% block content %}
+    <section class="hud">
+        <form action="/">
+            <button class="new-game">New Game</button>
+        </form>
+    </section>
     <section class="board">
         <table>
         {% for row in session['board_state'] %}
@@ -15,12 +20,13 @@
         </table>
     </section>
     <section class="word-input">
-        <form action="/validate-word">
-            <label for="player_input">Type found words here:</label>
+        <form id="player-input-form">
             <section class="player-input">
-                <input type="text" name="player_input" id="player-input" placeholder="Found A Word?">
-                <button>Submit</button>
+                <input type="text" name="player_input" id="player-input" placeholder="Found A Word?" autofocus>
             </section>
         </form>
+    </section>
+    <section class="notifications">
+        <p id="message"></p>
     </section>
 {% endblock %}
