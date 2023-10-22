@@ -76,8 +76,59 @@ body {
   margin-left: 1rem;
 }
 
-.hud :hover {
+.new-game-btn :hover {
   cursor: pointer;
+}
+
+.score {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  left: 2rem;
+  top: 5rem;
+}
+
+#score-title {
+  color: white;
+  font-size: 2rem;
+  font-family: "Roboto Mono", monospace;
+  margin-bottom: 0;
+}
+
+#score {
+  color: white;
+  font-size: 2rem;
+  font-family: "Roboto Mono", monospace;
+  margin-top: 0;
+}
+
+.timer {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  left: 2rem;
+  top: 15rem;
+}
+
+#timer-title {
+  color: white;
+  font-size: 2rem;
+  font-family: "Roboto Mono", monospace;
+  margin-bottom: 0;
+}
+
+.time-clock {
+  color: white;
+  font-size: 2rem;
+  font-family: "Roboto Mono", monospace;
+  margin-top: 0;
+}
+
+.time-clock-warning {
+  color: red;
+  font-size: 2rem;
+  font-family: "Roboto Mono", monospace;
+  margin-top: 0;
 }
 
 .notifications {
@@ -101,4 +152,18 @@ body {
   border-radius: 0.5rem;
   padding-left: 2rem;
   padding-right: 2rem;
+}
+
+.timeout {
+  display: flex;
+  justify-content: center;
+  font-size: 2rem;
+  font-family: "Roboto Mono", monospace;
+}
+
+#timeout {
+  color: white;
+  font-size: 2rem;
+  font-family: "Roboto Mono", monospace;
+  margin-top: 0;
 }

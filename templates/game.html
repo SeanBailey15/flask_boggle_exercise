@@ -1,10 +1,18 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <section class="hud">
+    <section class="new-game-btn">
         <form action="/">
             <button class="new-game">New Game</button>
         </form>
+    </section>
+    <section class="score">
+        <h1 id="score-title">Score:</h1>
+        <p id="score">0</p>
+    </section>
+    <section class="timer">
+        <h1 id="timer-title">Time:</h1>
+        <p id="timer" class="time-clock">60</p>
     </section>
     <section class="board">
         <table>
@@ -29,4 +37,12 @@
     <section class="notifications">
         <p id="message"></p>
     </section>
+    <section class="timeout">
+        <p id="timeout"></p>
+    </section>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            timer();
+        })
+    </script>
 {% endblock %}
