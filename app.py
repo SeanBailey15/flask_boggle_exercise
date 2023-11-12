@@ -17,7 +17,7 @@ def show_start():
     """Clear the session board state, generate a new board state, and render the html"""
     session['board_state'] = []
     session['board_state'] = boggle_game.make_board()
-    return render_template("start.html")
+    return render_template("index.html")
 
 @app.route('/game')
 def show_game():
